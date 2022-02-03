@@ -18,7 +18,7 @@ public class Main
             System.out.println(myArr.get(i));
         }
 
-        for (int i=0; i< myArr.getElements(); i++)
+        for (int i = 0; i< myArr.size(); i++)
         {
         }
 

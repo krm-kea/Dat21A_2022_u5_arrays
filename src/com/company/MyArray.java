@@ -5,16 +5,16 @@ public class MyArray<T>
     private Object[] arr;
 
     private int initialLength = 10;
-    private int elements = 0;
+    private int elementsCounter = 0;
 
     public MyArray()
     {
         arr = new Object[initialLength];
     }
 
-    public int getElements()
+    public int size()
     {
-        return elements;
+        return elementsCounter;
     }
 
     public T get(int index)
@@ -24,16 +24,16 @@ public class MyArray<T>
 
     public void add(T x)
     {
-        if (elements < arr.length)
+        if (elementsCounter < arr.length)
         {
-            arr[elements] = x;
-            elements++;
+            arr[elementsCounter] = x;
+            elementsCounter++;
         }
         else
         {
             increaseArrayLength();
-            arr[elements] = x;
-            elements++;
+            arr[elementsCounter] = x;
+            elementsCounter++;
         }
     }
 
@@ -74,7 +74,7 @@ public class MyArray<T>
         // en smule simpel kode, hvor der komme en komma "," for meget
         String str;
         str = "[";
-        for (int i=0; i<elements; i++)
+        for (int i = 0; i< elementsCounter; i++)
         {
             str = str + arr[i];
             str = str + ", ";
